@@ -1,21 +1,10 @@
+public class UC1 {
 
-public class UC1{
+    public static void main(String[] args) {
 
-        // Main method - Entry point of the program
-        public static void main(String[] args) {
-
-            // Display application details
-            System.out.println("=================================");
-            System.out.println("        PALINDROME CHECKER       ");
-            System.out.println("=================================");
-            System.out.println("Version: 1.0");
-            System.out.println("Author : eb1124");
-            System.out.println("---------------------------------");
-            System.out.println("Welcome to the Palindrome Checker Application!");
-            System.out.println("This application checks whether a given string is a palindrome.");
-            System.out.println("---------------------------------");
-
-            // Next use case can start here
-            System.out.println("Initializing palindrome validation module...");
-        }
+        System.out.println("Version: 1.0");
+        System.out.println("Welcome to the Palindrome Checker Application!");
+        System.out.println("system initilazation successfully");
+        
+    }
 }
