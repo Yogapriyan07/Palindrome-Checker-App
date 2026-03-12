@@ -1,11 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<module type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" inherit-compiler-output="true">
-    <exclude-output />
-    <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
-    </content>
-    <orderEntry type="inheritedJdk" />
-    <orderEntry type="sourceFolder" forTests="false" />
-  </component>
-</module>
+
+public class UC1{
+
+        // Main method - Entry point of the program
+        public static void main(String[] args) {
+
+            // Display application details
+            System.out.println("=================================");
+            System.out.println("        PALINDROME CHECKER       ");
+            System.out.println("=================================");
+            System.out.println("Version: 1.0");
+            System.out.println("Author : eb1124");
+            System.out.println("---------------------------------");
+            System.out.println("Welcome to the Palindrome Checker Application!");
+            System.out.println("This application checks whether a given string is a palindrome.");
+            System.out.println("---------------------------------");
+
+            // Next use case can start here
+            System.out.println("Initializing palindrome validation module...");
+        }
+}
