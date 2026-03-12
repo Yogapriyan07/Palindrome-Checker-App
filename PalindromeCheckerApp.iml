@@ -1,11 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<module type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" inherit-compiler-output="true">
-    <exclude-output />
-    <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
-    </content>
-    <orderEntry type="inheritedJdk" />
-    <orderEntry type="sourceFolder" forTests="false" />
-  </component>
-</module>
+public class UC4 {
+
+    public static void main(String[] args) {
+
+        String input = "level";
+
+        // Convert string to character array
+        char[] chars = input.toCharArray();
+
+        // Two-pointer approach
+        int left = 0;
+        int right = chars.length - 1;
+        boolean isPalindrome = true;
+
+        while (left < right) {
+            if (chars[left] != chars[right]) {
+                isPalindrome = false;
+                break;
+            }
+            left++;
+            right--;
+        }
+
+        // Output the result
+        if (isPalindrome) {
+            System.out.println("The string \"" + input + "\" is a PALINDROME.");
+        } else {
+            System.out.println("The string \"" + input + "\" is NOT a palindrome.");
+        }
+    }
+}
