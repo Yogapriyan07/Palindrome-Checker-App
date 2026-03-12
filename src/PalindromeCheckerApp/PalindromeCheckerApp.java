@@ -1,27 +1,63 @@
-package PalindromeCheckerApp;
+mport java.util.Scanner;
 
-    public class PalindromeCheckerApp {
 
-        public static void main(String[] args) {
+ 
+public class UseCase11PalindromeCheckerApp {
 
-            String input = "madam";   // Example input
-            String reversed = "";
+    /*
+     * Application entry point
+     */
+    public static void main(String[] args) {
 
-            // Iterate from the last character to the first
-            for (int i = input.length() - 1; i >= 0; i--) {
-                reversed += input.charAt(i);
-            }
+        Scanner sc = new Scanner(System.in);
 
-            // Compare original and reversed strings
-            if (input.equals(reversed)) {
-                System.out.println(input + " is a palindrome.");
-            } else {
-                System.out.println(input + " is not a palindrome.");
-            }
+        System.out.print("Enter a string: ");
+        String input = sc.nextLine();
+
+        // Create object of service class
+        PalindromeService service = new PalindromeService();
+
+        // Call method
+        boolean result = service.checkPalindrome(input);
+
+        if (result) {
+            System.out.println("Palindrome");
+        } else {
+            System.out.println("Not Palindrome");
         }
+
+        sc.close();
     }
+}
 
 
+/*
+
+ */
+class PalindromeService {
+
+    /*
+     * Method to check palindrome
+     */
+    public boolean checkPalindrome(String input) {
+
+        int start = 0;
+        int end = input.length() - 1;
+
+        // Compare characters moving inward
+        while (start < end) {
+
+            if (input.charAt(start) != input.charAt(end)) {
+                return false;
+            }
+
+            start++;
+            end--;
+        }
+
+        return true;
+    }
+}
 
 
 
