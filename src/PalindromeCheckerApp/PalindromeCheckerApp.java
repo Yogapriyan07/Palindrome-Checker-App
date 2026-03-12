@@ -1,25 +1,34 @@
-package PalindromeCheckerApp;
+import java.util.Scanner;
 
-    public class PalindromeCheckerApp {
+public class UseCase10PalindromeCheckerApp {
 
-        public static void main(String[] args) {
+    public static void main(String[] args) {
 
-            String input = "madam";   // Example input
-            String reversed = "";
+        Scanner sc = new Scanner(System.in);
 
-            // Iterate from the last character to the first
-            for (int i = input.length() - 1; i >= 0; i--) {
-                reversed += input.charAt(i);
-            }
+        System.out.print("Enter a string: ");
+        String input = sc.nextLine();
 
-            // Compare original and reversed strings
-            if (input.equals(reversed)) {
-                System.out.println(input + " is a palindrome.");
-            } else {
-                System.out.println(input + " is not a palindrome.");
-            }
+        // Normalize string (remove spaces and convert to lowercase)
+        String normalized = input.replaceAll("\\s+", "").toLowerCase();
+
+        // Reverse the normalized string
+        String reversed = "";
+        for (int i = normalized.length() - 1; i >= 0; i--) {
+            reversed = reversed + normalized.charAt(i);
         }
+
+        // Check palindrome
+        if (normalized.equals(reversed)) {
+            System.out.println("The given string is a Palindrome (ignoring spaces and case).");
+        } else {
+            System.out.println("The given string is NOT a Palindrome.");
+        }
+
+        sc.close();
     }
+}
+
 
 
 
